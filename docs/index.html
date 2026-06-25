@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,65 +9,65 @@
 
     <title>Global Wordnet Conference 2027 (GWC2027)</title>
 
-    <!-- Font Awesome CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
     <link href="/static/sticky-footer-navbar.css" rel="stylesheet">
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
     <style>
-        div {
+        div.justify-text {
             text-align: justify;
             text-justify: inter-word;
         }
         .xsmall {
             font-size: 0.60rem; /* 12px if base is 16px */
         }
+        /* Custom styling to ensure footer behaves nicely if pages are short */
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        footer {
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
     <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="/GWC2027/">GWC2027</a>
+        <a class="navbar-brand" href="#home" onclick="showSection('home')">GWC2027</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav mr-auto">
-<!--                <li class="nav-item active">-->
-<!--                    <a class="nav-link" href="/GWC2027/">Home <span class="sr-only">(current)</span></a>-->
-<!--                </li>-->
                 <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="dropdown-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown-info">
-                        <a class="dropdown-item" href="">Call for Papers (TBA)</a>
-                        <a class="dropdown-item" href="">Important Dates (TBA)</a>
-                        <a class="dropdown-item" href="">Registration (TBA)</a>
-                        <a class="dropdown-item" href="">Program (TBA)</a>
-                        <a class="dropdown-item" href="">Keynote speakers (TBA)</a>
-                        <a class="dropdown-item" href="">Organization (TBA)</a>
-                        <a class="dropdown-item" href="">Venue (TBA)</a>
-                        <a class="dropdown-item" href="">Housing possibilities (TBA)</a>
-                        <a class="dropdown-item" href="">Scholarships (TBA)</a>
-                        <a class="dropdown-item" href="">Contacts (TBA)</a>
+                        <a class="dropdown-item" href="#cfp" onclick="showSection('cfp')">Call for Papers (TBA)</a>
+                        <a class="dropdown-item" href="#dates" onclick="showSection('dates')">Important Dates (TBA)</a>
+                        <a class="dropdown-item" href="#registration" onclick="showSection('registration')">Registration (TBA)</a>
+                        <a class="dropdown-item" href="#program" onclick="showSection('program')">Program (TBA)</a>
+                        <a class="dropdown-item" href="#keynotes" onclick="showSection('keynotes')">Keynote speakers (TBA)</a>
+                        <a class="dropdown-item" href="#organization" onclick="showSection('organization')">Organization (TBA)</a>
+                        <a class="dropdown-item" href="#venue" onclick="showSection('venue')">Venue (TBA)</a>
+                        <a class="dropdown-item" href="#housing" onclick="showSection('housing')">Housing possibilities (TBA)</a>
+                        <a class="dropdown-item" href="#scholarships" onclick="showSection('scholarships')">Scholarships (TBA)</a>
+                        <a class="dropdown-item" href="#contacts" onclick="showSection('contacts')">Contacts (TBA)</a>
                     </div>
                 </li>
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="/">Other</a>-->
-<!--                </li>-->
             </ul>
         </div>
     </nav>
@@ -76,36 +75,118 @@
 
     <main role="main" class="container">
         <br>
-        <h2>Global Wordnet Conference 2027</h2>
-        <h5>Vrije Universiteit Amsterdam, Amsterdam (The Netherlands), February 1-4, 2027</h5>
-        <hr>
 
-        <div>
-        <img src="vua-slim.png" alt="Picture of VU Amsterdam" class="img-fluid">
+        <div id="content-dynamic">
+
+            <section id="home" class="content-section justify-text">
+
+                <h2>Global Wordnet Conference 2027</h2>
+                <h5>Vrije Universiteit Amsterdam, Amsterdam (The Netherlands), February 1-4, 2027</h5>
+                <hr>
+
+                <div>
+                    <img src="vua-slim.png" alt="Picture of VU Amsterdam" class="img-fluid">
+                </div>
+                <br>
+
+
+                Welcome to the website of the Global WordNet Conference 2027!<br><br>
+                We will share all information about the program and venue of the conference on this website.<br>
+                The <a href="https://home.cltl.labs.vu.nl/">Computational Linguistics and Text Mining Lab</a> at <a href="https://vu.nl/en">Vrije Universiteit (VU) Amsterdam</a> is looking forward to welcome you in Amsterdam!<br>
+                <br><br>
+                <h4>More information soon to come!</h4>
+            </section>
+
+            <section id="cfp" class="content-section justify-text d-none">
+                <h3>Call for Papers</h3>
+                <p>Information regarding the topics, submission guidelines, and tracks will be announced here soon.</p>
+            </section>
+
+            <section id="dates" class="content-section justify-text d-none">
+                <h3>Important Dates</h3>
+                <p>Deadlines for abstract submissions, paper notifications, and camera-ready formatting will be updated shortly.</p>
+            </section>
+
+            <section id="registration" class="content-section justify-text d-none">
+                <h3>Registration</h3>
+                <p>Details regarding early-bird pricing, student discounts, and registration portals are on the way.</p>
+            </section>
+
+            <section id="program" class="content-section justify-text d-none">
+                <h3>Program</h3>
+                <p>The schedules, session tracks, and presentation timetables will be posted once finalized.</p>
+            </section>
+
+            <section id="keynotes" class="content-section justify-text d-none">
+                <h3>Keynote Speakers</h3>
+                <p>Stay tuned to discover the invited global experts presenting at GWC2027.</p>
+            </section>
+
+            <section id="organization" class="content-section justify-text d-none">
+                <h3>Organization</h3>
+                <br>
+                <div>
+                    <h6>Local Organizing Committee:</h6>
+                    Piek Vossen, Luis Morgado da Costa, Pia Sommerauer, Isa Maks, Hennie van der Vliet
+                </div>
+                <br>
+                <div>
+                    <h6>Program Committee:</h6>
+                    Details about the program committee will be posted once finalized.
+                </div>
+            </section>
+
+            <section id="venue" class="content-section justify-text d-none">
+                <h3>Venue</h3>
+                <p>Directions, maps, and information regarding the Vrije Universiteit Amsterdam campus locations.</p>
+            </section>
+
+            <section id="housing" class="content-section justify-text d-none">
+                <h3>Housing Possibilities</h3>
+                <p>Recommended hotels, hostels, and accommodation advice close to the conference location.</p>
+            </section>
+
+            <section id="scholarships" class="content-section justify-text d-none">
+                <h3>Scholarships</h3>
+                <p>Grants, bursaries, and financial support application parameters for attending students and researchers.</p>
+            </section>
+
+            <section id="contacts" class="content-section justify-text d-none">
+                <h3>Contacts</h3>
+                <p>Have questions? Reach out to the organizing team through our upcoming inquiry forms.</p>
+            </section>
+
         </div>
-        <br>
 
-        <div>
-            Welcome to the website of the Global WordNet Conference 2027!<br><br>
-            We will share all information about the program and venue of the conference on this website.<br>
-            The <a href="https://home.cltl.labs.vu.nl/">Computational Linguistics and Text Mining Lab</a> at <a href="https://vu.nl/en">Vrije Universiteit (VU) Amsterdam</a> is looking forward to welcome you in Amsterdam!<br>
-        </div>
+        <br><br><br>
         <hr>
-
-        <br><br><br><br>
-
-        <h4>More information soon to come!</h4>
-
-        <br><br><br><br><br><br>
-    <hr>
-    </main>
-
-    <footer class="footer">
-      <div class="container text-muted xsmall">
+        <div class="container text-muted xsmall">
             <span> <a href="https://home.cltl.labs.vu.nl/">Computational Linguistics and Text Mining Lab</a>, <a href="https://vu.nl/en">VU Amsterdam</a></span><br>
             <span> Last modified: June 2026</span>
-      </div>
-    </footer>
+        </div>
+    </main>
 
-  </body>
+
+    <script type="text/javascript">
+        function showSection(sectionId) {
+            // Hide all content sections by adding Bootstrap's 'd-none' utility class
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.add('d-none');
+            });
+
+            // Reveal the targeted section by removing 'd-none'
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.remove('d-none');
+            }
+
+            // Optional: smooth scroll back up to the top of the content context
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Clean up redundant scripts conflict from original code:
+        // (Removed conflicting 1.4.2 jQuery script link from the head section to keep the standard 3.2.1)
+    </script>
+</body>
 </html>
